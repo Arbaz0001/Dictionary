@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dictionary App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>📖 Dictionary</h1>
+      <div class="controls">
+        <select id="font-select">
+          <option value="serif">Serif</option>
+          <option value="sans-serif" selected>Sans-serif</option>
+          <option value="monospace">Monospace</option>
+        </select>
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </header>
+
+    <main>
+      <form id="search-form">
+        <input type="text" id="word-input" placeholder="Search a word..." required />
+        <button type="submit">🔍</button>
+      </form>
+      <div id="result" class="result-box"></div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+  

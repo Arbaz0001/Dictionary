@@ -1,0 +1,108 @@
+:root {
+  --bg: #fff;
+  --text: #222;
+  --box: #f4f4f4;
+}
+
+body.dark {
+  --bg: #1e1e2f;
+  --text: #fff;
+  --box: #2c2c3e;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+  transition: 0.3s ease;
+}
+
+.app {
+  max-width: 600px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+select {
+  padding: 4px;
+}
+
+.switch {
+  position: relative;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  background: #ccc;
+  border-radius: 20px;
+  top: 0; left: 0; right: 0; bottom: 0;
+  cursor: pointer;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  background: #fff;
+  height: 14px;
+  width: 14px;
+  bottom: 3px;
+  left: 3px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background: #4caf50;
+}
+
+input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+form {
+  display: flex;
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.result-box {
+  margin-top: 25px;
+  background: var(--box);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+audio {
+  margin-top: 10px;
+}
